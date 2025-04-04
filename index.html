@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Tree planting Planner</title>
+  <title>Tree Planting Planner</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
   <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
@@ -11,24 +11,26 @@
   <script src="Script.js" defer></script>
 </head>
 <body>
-  <h2>Tree planting Planner</h2>
-  <div id="viewDiv"></div>
+  <h2>Tree Planting Planner</h2>
+
+  <!-- Map View -->
   <div id="viewDiv"></div>
 
   <!-- Layer Toggle Controls -->
   <div id="layerControls">
     <h4>Toggle Layers</h4>
-    <label><input type="checkbox" id="natStreetChk" checked> Na
-    <label><input type="checkbox" id="highMoistureChk" checked>
-    <label><input type="checkbox" id="highMoistureStChk" checked>
-    <label><input type="checkbox" id="naturalCommonChk" checked>
-    <label><input type="checkbox" id="HighHeatStreetChk" checked>
-    <label><input type="checkbox" id="HighHeatCommonchk" checked>
-    <label><input type="checkbox" id="HeatMoistureInteractionChk" checked>
+    <label><input type="checkbox" id="natStreetChk" checked> Naturalized Streets</label><br>
+    <label><input type="checkbox" id="highMoistureChk" checked> High Moisture Areas</label><br>
+    <label><input type="checkbox" id="highMoistureStChk" checked> High Moisture Streets</label><br>
+    <label><input type="checkbox" id="naturalCommonChk" checked> Common Area Naturalization</label><br>
+    <label><input type="checkbox" id="highHeatStreetChk" checked> High Heat Streets</label><br>
+    <label><input type="checkbox" id="highHeatCommonChk" checked> High Heat Common Areas</label><br>
+    <label><input type="checkbox" id="intersectionChk" checked> Heat Moisture Intersection</label><br>
   </div>
-  
+
   <!-- Toggle Legend Button -->
   <button id="toggleLegend">Show Legend</button>
   <div id="legendContainer"><div id="legendDiv"></div></div>
-  </body>
-  </html>
+
+</body>
+</html>
