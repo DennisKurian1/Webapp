@@ -81,6 +81,93 @@ require([
     NatStreetLayer, highMoistureLayer, highMoistureStreetsLayer,
     naturalCommonLayer, highHeatStreetView1Layer, highHeatCommonLayer, intersectionLayer
   ]);
+  NatStreetLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#1B7837", 
+    outline: {
+      color: "#1B7837", 
+      width: 1
+    }
+  }
+};
+//
+
+highMoistureLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#84B9E599", 
+    outline: {
+      color: "#84B9E599", 
+      width: 1
+    }
+  }
+};
+
+highMoistureStreetsLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#4575B480", 
+    outline: {
+      color: "#4575B480", 
+      width: 1
+    }
+  }
+};
+
+naturalCommonLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF", 
+    outline: {
+      color: "#A9DFBF", 
+    }
+  }
+};
+
+highHeatStreetView1Layer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#FC8D59", 
+    outline: {
+      color: "#FC8D59", 
+      width: 1
+    }
+  }
+};
+
+highHeatCommonLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#B2182B99",
+    outline: {
+      color:"rgba(178, 24, 43, 0.2)", 
+      width: 1
+    }
+  }
+};
+
+intersectionLayer.renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#FEE090", 
+    outline: {
+      color: "#FEE090", 
+      width: 1
+    }
+  }
+
+};
+
+
+
 
   // Legend
   const legend = new Legend({
