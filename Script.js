@@ -166,7 +166,7 @@ require([
     });
   
     const intersectionLayer = new FeatureLayer({
-      url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/intersection_heat_moisture_view/FeatureServer",
+      url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/intersection_heat_moisture_view1/FeatureServer",
       title: "Heat Moisture Intersection",
       visible: true,
       outFields: ["*"],
