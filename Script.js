@@ -121,7 +121,7 @@ require([
     });
   
     const naturalCommonLayer = new FeatureLayer({
-      url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalization_Common_Area_2_view/FeatureServer",
+      url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalized_Area_view/FeatureServer",
       title: "Common Area Naturalization",
       visible: true,
       outFields: ["*"],
