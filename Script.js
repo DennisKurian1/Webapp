@@ -1,3 +1,5 @@
+<script src="https://js.arcgis.com/4.26/"></script>
+<script>
 require([
   "esri/Map",
   "esri/views/MapView",
@@ -393,3 +395,8 @@ document.getElementById("HeatMoistureInteractionChk").addEventListener("change",
 });
   map.addMany([NatStreetLayer, highMoistureLayer,highMoistureStreetsLayer,naturalCommonLayer,highHeatStreetView1Layer,highHeatCommonLayer,intersectionLayer]);
 });
+
+});
+</script>
+
+
