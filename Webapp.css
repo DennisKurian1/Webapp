@@ -14,4 +14,39 @@ h2 {
   border-radius: 6px;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
   font-family: Arial, sans-serif;
+#viewDiv {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+}
+#layerControls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  z-index: 100;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+#toggleLegend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  background: white;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+#legendContainer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 100;
+}
+  
 }
