@@ -7,14 +7,14 @@ html, body, #viewDiv {
 
 h2 {
   position: absolute;
-  top: 10px;
+  top: 50px;
   left: 15px;
   z-index: 99;
   background: white;
   padding: 6px 10px;
   border-radius: 6px;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
-  font-family: Arial, sans-serif;
+  font-family: Calibri, sans-serif;
 }
 <!--Sushmita-->
 #viewDiv {
