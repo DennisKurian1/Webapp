@@ -14,14 +14,21 @@ require([
       zoom: 13
     });
   
- 
-    const toggleButton = document.getElementById("toggleLegend");
-    const legendContainer = document.getElementById("legendContainer");
+    view.when(() => {
+      // ✅ Add legend
+      const legend = new Legend({
+        view: view,
+        container: "legendDiv"
+      });
   
-    toggleButton.addEventListener("click", function () {
-      const isHidden = legendContainer.style.display === "none";
-      legendContainer.style.display = isHidden ? "block" : "none";
-      toggleButton.textContent = isHidden ? "Hide Legend" : "Show Legend";
+      const toggleButton = document.getElementById("toggleLegend");
+      const legendContainer = document.getElementById("legendContainer");
+  
+      toggleButton.addEventListener("click", function () {
+        const isHidden = legendContainer.style.display === "none";
+        legendContainer.style.display = isHidden ? "block" : "none";
+        toggleButton.textContent = isHidden ? "Hide Legend" : "Show Legend";
+      });
     });
   
     // Tree Species by area category
@@ -65,7 +72,7 @@ require([
       "Large": ["River Birch", "Swamp White Oak", "Red Maple", "Tamarack", "Moraine Sweetgum", "Sycamore"]
     };
   
-  
+    // Layer definitions with popup and suggestions
     const NatStreetLayer = new FeatureLayer({
       url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalized_streets_view1/FeatureServer",
       title: "Naturalized Streets",
@@ -171,7 +178,7 @@ require([
       }
     });
   
- 
+   
     map.addMany([
       NatStreetLayer, highMoistureLayer, highMoistureStreetsLayer,
       naturalCommonLayer, highHeatStreetView1Layer, highHeatCommonLayer, intersectionLayer
@@ -188,7 +195,7 @@ require([
       ].forEach(layer => layer.definitionExpression = expr);
     };
   
-  
+    
     document.getElementById("natStreetChk").addEventListener("change", () => {
       NatStreetLayer.visible = event.target.checked;
     });
@@ -211,7 +218,6 @@ require([
       intersectionLayer.visible = event.target.checked;
     });
   
-    
     const legend = new Legend({ view: view, container: "legendDiv" });
   
   });
