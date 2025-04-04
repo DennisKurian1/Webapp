@@ -320,9 +320,76 @@ intersectionLayer.renderer = {
   }
 };
 
-
-
-
-
+const NatStreetLayer = new FeatureLayer({
+  url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalized_streets_view/FeatureSer
+  title: "Naturalized Streets",
+  visible: true
+});
+const highMoistureLayer = new FeatureLayer({
+  url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/High_Moisture_Area_view/FeatureServ
+  title: "High Moisture Areas",
+  visible: true
+});
+const highMoistureStreetsLayer = new FeatureLayer({
+  url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/High__Moisture_Streets_view/Feature
+  title: "High Moisture Streets",
+  visible: true
+});
+const naturalCommonLayer = new FeatureLayer({
+  url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalization_Common_Area_view/Fea
+  title: "Common Area Naturalization",
+  visible: true
+});
+const highHeatStreetView1Layer = new FeatureLayer({
+   url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/_High_Heat_Street_view1/FeatureSer
+   title: "High Heat Street",
+   visible: true
+});
+const highHeatCommonLayer = new FeatureLayer({
+   url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/High_Heat_common_view/FeatureServe
+   title: "High Heat Common Area",
+   visible: true
+});
+const intersectionLayer = new FeatureLayer({
+   url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/intersection_heat_moisture_view/Fe
+   title: "Heat Moisture Intersection",
+   visible: true
+});
+// Add layers to map
+map.addMany([NatStreetLayer, highMoistureLayer, highMoistureStreetsLayer, naturalCommonLayer, highHeatStreetVi
+// Legend
+const legend = new Legend({
+  view: view,
+  container: "legendDiv"
+});
+const toggleButton = document.getElementById("toggleLegend");
+const legendContainer = document.getElementById("legendContainer");
+toggleButton.addEventListener("click", function () {
+  const isHidden = legendContainer.style.display === "none";
+  legendContainer.style.display = isHidden ? "block" : "none";
+  toggleButton.textContent = isHidden ? "Hide Legend" : "Show Legend";
+});
+// Layer toggles
+document.getElementById("natStreetChk").addEventListener("change", function () {
+  NatStreetLayer.visible = this.checked;
+});
+document.getElementById("highMoistureChk").addEventListener("change", function () {
+  highMoistureLayer.visible = this.checked;
+});
+document.getElementById("highMoistureStChk").addEventListener("change", function () {
+  highMoistureStreetsLayer.visible = this.checked;
+});
+document.getElementById("naturalCommonChk").addEventListener("change", function () {
+  naturalCommonLayer.visible = this.checked;
+});
+document.getElementById("HighHeatStreetChk").addEventListener("change", function () {
+  highHeatStreetView1Layer.visible = this.checked;
+});
+document.getElementById("HighHeatCommonchk").addEventListener("change", function () {
+  highHeatCommonLayer.visible = this.checked;
+});
+document.getElementById("HeatMoistureInteractionChk").addEventListener("change", function () {
+  intersectionLayer.visible = this.checked;
+});
   map.addMany([NatStreetLayer, highMoistureLayer,highMoistureStreetsLayer,naturalCommonLayer,highHeatStreetView1Layer,highHeatCommonLayer,intersectionLayer]);
 });
