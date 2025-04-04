@@ -4,36 +4,34 @@
   <meta charset="utf-8" />
   <title>Tree Planting Planner</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-
   <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
   <link rel="stylesheet" href="Webapp.css" />
   <script src="https://js.arcgis.com/4.32/"></script>
-  <script src="Script.js" defer></script>
+  <script src="Script.JS/jstest.js" defer></script>
 </head>
 <body>
-  <h2>Tree Planting Planner</h2>
-  <!-- Sushmita -->
-  <!-- Map View -->
+  <h2 id="mainHeading">Tree Planting Planner</h2>
+
   <div id="viewDiv"></div>
 
-  <!-- Layer Toggle Controls -->
+  <div id="owernshipControlls">
+    <button onclick="OwernshipFilter('Public Owned')">🔓 Public</button>
+    <button onclick="OwernshipFilter('Private Owned')">🔒 Private</button>
+    <button onclick="OwernshipFilter('All')">Reset View</button>
+  </div>
+
   <div id="layerControls">
     <h4>Toggle Layers</h4>
     <label><input type="checkbox" id="natStreetChk" checked> Naturalized Streets</label><br>
     <label><input type="checkbox" id="highMoistureChk" checked> High Moisture Areas</label><br>
     <label><input type="checkbox" id="highMoistureStChk" checked> High Moisture Streets</label><br>
     <label><input type="checkbox" id="naturalCommonChk" checked> Common Area Naturalization</label><br>
-    <label><input type="checkbox" id="highHeatStreetChk" checked> High Heat Streets</label><br>
-    <label><input type="checkbox" id="highHeatCommonChk" checked> High Heat Common Areas</label><br>
-    <label><input type="checkbox" id="intersectionChk" checked> Heat Moisture Intersection</label><br>
+    <label><input type="checkbox" id="HighHeatStreetChk" checked> High Heat Street</label><br>
+    <label><input type="checkbox" id="HighHeatCommonchk" checked> High Heat Common Area</label><br>
+    <label><input type="checkbox" id="HeatMoistureIntersectionChk" checked> Heat Moisture Intersection</label><br>
   </div>
 
-  
-
   <button id="toggleLegend">Show Legend</button>
-<div id="legendContainer" style="display:none;">
-  <div id="legendDiv"></div>
-</div>
-
+  <div id="legendContainer"><div id="legendDiv"></div></div>
 </body>
 </html>
