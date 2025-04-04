@@ -321,7 +321,7 @@ intersectionLayer.renderer = {
     }
   }
 };
-
+<!-- Sushmita -->
 const NatStreetLayer = new FeatureLayer({
   url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalized_streets_view/FeatureSer
   title: "Naturalized Streets",
