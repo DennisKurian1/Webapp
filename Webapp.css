@@ -37,7 +37,7 @@ h2 {
 }
 #toggleLegend {
   position: absolute;
-  top: 50%;
+  top: 50px;
   left: 10px;
   z-index: 100;
   background: white;
