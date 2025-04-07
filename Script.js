@@ -181,12 +181,12 @@ require([
     });
     NatStreetLayer.renderer = {
         type: "simple",
-        symbol: {
-          type: "simple-fill",
-          color: "#1B7837", 
-          outline: {
-            color: "#1B7837", 
-            width: 1
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF",
+    outline: {
+      color: "#A9DFBF",
+      width: 1
           }
         }
       };
@@ -228,37 +228,37 @@ require([
       };
       
       highHeatStreetView1Layer.renderer = {
-        type: "simple",
-        symbol: {
-          type: "simple-fill",
-          color: "#FC8D59", 
-          outline: {
-            color: "#FC8D59", 
-            width: 1
+       type: "simple",
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF",
+    outline: {
+      color: "#A9DFBF",
+      width: 1
           }
         }
       };
       
       highHeatCommonLayer.renderer = {
         type: "simple",
-        symbol: {
-          type: "simple-fill",
-          color: "#B2182B99",
-          outline: {
-            color:"rgba(178, 24, 43, 0.2)", 
-            width: 1
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF",
+    outline: {
+      color: "#A9DFBF",
+      width: 1
           }
         }
       };
       
       intersectionLayer.renderer = {
         type: "simple",
-        symbol: {
-          type: "simple-fill",
-          color: "#FEE090", 
-          outline: {
-            color: "#FEE090", 
-            width: 1
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF",
+    outline: {
+      color: "#A9DFBF",
+      width: 1
           }
         }
       
