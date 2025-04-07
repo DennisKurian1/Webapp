@@ -14,15 +14,15 @@ require([
       zoom: 13
     });
   
-    // ✅ Wait until view is ready
+    
     view.when(() => {
-      // ✅ Add legend
+      
       const legend = new Legend({
         view: view,
         container: "legendDiv"
       });
   
-      // ✅ Toggle visibility logic
+      
       const toggleButton = document.getElementById("toggleLegend");
       const legendContainer = document.getElementById("legendContainer");
   
@@ -33,7 +33,7 @@ require([
       });
     });
   
-    // Tree Species by area category
+   
     const Natstreetoptions = {
       "Small": ["Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac", "Whitebeam", "Hedge Maple", "Zelkova", "Amur Maackia", "Paperbark Maple"],
       "Medium": ["Hedge Maple", "Zelkova"],
@@ -74,7 +74,7 @@ require([
       "Large": ["River Birch", "Swamp White Oak", "Red Maple", "Tamarack", "Moraine Sweetgum", "Sycamore"]
     };
   
-    // Layer definitions with popup and suggestions
+   
     const NatStreetLayer = new FeatureLayer({
       url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Naturalized_streets_view1/FeatureServer",
       title: "Naturalized Streets",
@@ -308,7 +308,8 @@ require([
       intersectionLayer.visible = event.target.checked;
     });
   
-    // Add Legend (AFTER View is Ready)
+
+    
     const legend = new Legend({ view: view, container: "legendDiv" });
   
   });
