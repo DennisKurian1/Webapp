@@ -194,24 +194,24 @@ require([
       
       highMoistureLayer.renderer = {
         type: "simple",
-        symbol: {
-          type: "simple-fill",
-          color: "#84B9E599", 
-          outline: {
-            color: "#84B9E599", 
-            width: 1
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF",
+    outline: {
+      color: "#A9DFBF",
+      width: 1
           }
         }
       };
       
       highMoistureStreetsLayer.renderer = {
         type: "simple",
-        symbol: {
-          type: "simple-fill",
-          color: "#4575B480", 
-          outline: {
-            color: "#4575B480", 
-            width: 1
+  symbol: {
+    type: "simple-fill",
+    color: "#A9DFBF",
+    outline: {
+      color: "#A9DFBF",
+      width: 1
           }
         }
       };
