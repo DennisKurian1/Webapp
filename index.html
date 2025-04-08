@@ -10,28 +10,25 @@
   <script src="Script.js" defer></script>
 </head>
 <body>
-  <h2 id="mainHeading">Tree Planting Planner</h2>
+  <h2 id="Heading">Tree Planting Planner</h2>
 
   <div id="viewDiv"></div>
 
-  <div id="owernshipControlls">
-    <button onclick="OwernshipFilter('Public Owned')">🔓 Public</button>
-    <button onclick="OwernshipFilter('Private Owned')">🔒 Private</button>
-    <button onclick="OwernshipFilter('All')">Reset View</button>
+  <div id="Ownership">
+    <button onclick="OWfiltr('Public Owned')">Public</button>
+    <button onclick="OWfiltr('Private Owned')">Private</button>
+    <button onclick="OWfiltr('All')">Reset View</button>
   </div>
 
-  <div id="layerControls">
+  <div id="Layers">
     <h4>Layers</h4>
-    <label><input type="checkbox" id="natStreetChk" checked> Naturalized Streets</label><br>
-    <label><input type="checkbox" id="highMoistureChk" checked> High Moisture Areas</label><br>
-    <label><input type="checkbox" id="highMoistureStChk" checked> High Moisture Streets</label><br>
-    <label><input type="checkbox" id="naturalCommonChk" checked> Common Area Naturalization</label><br>
-    <label><input type="checkbox" id="HighHeatStreetChk" checked> High Heat Street</label><br>
-    <label><input type="checkbox" id="HighHeatCommonchk" checked> High Heat Common Area</label><br>
-    <label><input type="checkbox" id="HeatMoistureIntersectionChk" checked> Heat Moisture Intersection</label><br>
+    <label><input type="checkbox" id="commonToggl" checked> Layers</label>
   </div>
 
-  <button id="toggleLegend">Show Legend</button>
-  <div id="legendContainer"><div id="legendDiv"></div></div>
+ 
+  <button id="LEgend">Show Legend</button>
+  <div id="Container_legend" style="display: none;">
+    <div id="legendDiv"></div>
+  </div>
 </body>
 </html>
