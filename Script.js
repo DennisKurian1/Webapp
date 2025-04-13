@@ -358,31 +358,4 @@ symbol: {
     ].forEach(layer => layer.definitionExpression = expr);
   };
 
-  // Layer toggles
-  // document.getElementById("natStreetChk").addEventListener("change", () => {
-  //   NatStreetLayer.visible = event.target.checked;
-  // });
-  // document.getElementById("highMoistureChk").addEventListener("change", () => {
-  //   highMoistureLayer.visible = event.target.checked;
-  // });
-  // document.getElementById("highMoistureStChk").addEventListener("change", () => {
-  //   highMoistureStreetsLayer.visible = event.target.checked;
-  // });
-  // document.getElementById("naturalCommonChk").addEventListener("change", () => {
-  //   naturalCommonLayer.visible = event.target.checked;
-  // });
-  // document.getElementById("HighHeatStreetChk").addEventListener("change", () => {
-  //   highHeatStreetView1Layer.visible = event.target.checked;
-  // });
-  // document.getElementById("HighHeatCommonchk").addEventListener("change", () => {
-  //   highHeatCommonLayer.visible = event.target.checked;
-  // });
-  // document.getElementById("HeatMoistureInteractionChk").addEventListener("change", () => {
-  //   intersectionLayer.visible = event.target.checked;
-  // });
-
-
   
-  // const legend = new Legend({ view: view, container: "legendDiv" });
-
-});
