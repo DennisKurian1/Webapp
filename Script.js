@@ -3,23 +3,23 @@ require([
   "esri/views/MapView",  
   "esri/layers/FeatureLayer",   //https://developers.arcgis.com/javascript/latest/sample-code/intro-mapview
   "esri/widgets/Legend",
-  "esri/widgets/Search"         // loading the modules required for the app
+  "esri/widgets/Search"
 //https://developers.arcgis.com/javascript/latest/
 ], function (Map, MapView, FeatureLayer, Legend, Search
 ) {
 
   const map = new Map({ basemap: "streets" });
-//definig the basemap as street
+
   const view = new MapView({
-    container: "viewDiv",//view in the css id viewDiv with 100% widh and height
+    container: "viewDiv",
     map: map,
-    center: [-78.32, 44.3],  // cenre at pererborough
+    center: [-78.32, 44.3],
     zoom: 13
   });
-  view.when(() => {  //when the map is loaded,is what inside loads
+  view.when(() => {  //when the map is loaded, ie the meaning of view when
     
     view.when(() => {
-      // Disable legend for all layers except NatStreetLayer. because although its 7 layers, it will be visible as one. so all others expect one has been disabled
+      // Disable legend for all layers except NatStreetLayer. Why this... since i am loading all the layers and showing them as one, i dont need each layers legenc
       [
         highMoistureLayer,
         highMoistureStreetsLayer,
@@ -28,7 +28,7 @@ require([
         highHeatCommonLayer,    
         intersectionLayer
       ].forEach(layer => layer.legendEnabled = false);
-    //To hide layers completely from the legend,  the legendEnabled property of the layer to false.
+    //To hide layers completely from the legend, you should set the legendEnabled property of the layer to false.
 // Default Value:false  //https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html
       // Legend for one layer
       const legend = new Legend({    
@@ -175,9 +175,12 @@ require([
       title: "Ownership: {Ownership}",
       content: function (feature) {
         const a = feature.graphic.attributes;
-        const list = (highMoisturespecies[a.Area_Category] || []).map(x => `<li>${x}</li>`).join("");
+        const list = a.Common_Name
+          ? a.Common_Name.split(',').map(x => `<li>${x.trim()}</li>`).join("")
+          : "<i>No species listed</i>";
         return `<b>Area Category:</b> ${a.Area_Category}<br><b>Suggested Trees:</b><ul>${list}</ul>`;
-      }
+      
+    }
     }
   });
 
@@ -250,7 +253,7 @@ const list = (CommonAreaSpecies[a.Area_Category] || []).map(x => `<li>${x}</li>`
         const list = (IntersectionHeatMoistureSpecies[a.Area_Category] || []).map(x => `<li>${x}</li>`).join("");
         return `<b>Area Category:</b> ${a.Area_Category}<br><b>Suggested Trees:</b><ul>${list}</ul>`;
       }//https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html
-    }
+    }// adding rendering to the 
   });//https://developers.arcgis.com/javascript/latest/sample-code/popuptemplate-function
   NatStreetLayer.renderer = {
       type: "simple",
@@ -358,4 +361,6 @@ symbol: {
     ].forEach(layer => layer.definitionExpression = expr);
   };
 
-  
+
+
+});
