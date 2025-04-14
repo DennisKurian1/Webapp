@@ -85,24 +85,26 @@ require([
     
 
  
-  const Natstreetoptions =  { "Small": [   "Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac", "Whitebeam", "Hedge Maple", "Zelkova",  "Amur Maackia", "Paperbark Maple"
+  const Natstreetoptions = {
+    "Small": ["Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac",  "Whitebeam", "Hedge Maple", "Zelkova", "Amur Maackia", "Paperbark Maple"
     ],
-    "Medium": [  "Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac",   "Whitebeam", "Hedge Maple", "Zelkova",   "Amur Maackia", "Paperbark Maple"
+    "Medium": ["Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac", "Whitebeam", "Hedge Maple", "Zelkova", "Amur Maackia", "Paperbark Maple"
     ],
-    "Large": [
-      "Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac", 
-      "Whitebeam", "Hedge Maple", 
-      "Amur Maackia", "Paperbark Maple"
+    "Large": ["Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac", "Whitebeam", "Hedge Maple", "Amur Maackia", "Paperbark Maple"
     ]
   };
+  
+  
 
   const highMoisturespecies = {
-    "Large": [
-      "River Birch", "Swamp White Oak", "Red Maple",   "Tamarack", "Moraine Sweetgum", "Sycamore",   "Black Gum"
+    "Large": ["River Birch", "Swamp White Oak", "Red Maple", "Tamarack", "Moraine Sweetgum", "Sycamore", "Black Gum"
     ],
-    "Medium": [   "Red Maple", "Tamarack", "Moraine Sweetgum",    "Sycamore", "Black Gum"
-    ],"Small": [  "Tamarack", "Moraine Sweetgum", "Sycamore",   "Black Gum"
-    ]};
+    "Medium": ["Red Maple", "Tamarack", "Moraine Sweetgum", "Sycamore", "Black Gum"
+    ],
+    "Small": ["Tamarack", "Moraine Sweetgum", "Sycamore", "Black Gum"
+    ]
+  };
+  
 
   const HighMoistureStreetsSpecies = { "Small": [   "Oakleaf Mountain Ash", "Ivory Silk Japanese Tree Lilac", "Whitebeam", "Hedge Maple", "Zelkova",  "Amur Maackia", "Paperbark Maple"
   ],
@@ -115,37 +117,32 @@ require([
   ]
 };
 
-  const CommonAreaSpecies = { "Small": [  "Paperbark Maple", "Apollo Sugar Maple", "Smooth Serviceberry", "Blue Beech",  "Eastern Redbud", "Thornless Cockspur Hawthorn", "Amur Maackia",
-      "Eastern Redcedar"
-    ], "Medium": [  "Paperbark Maple", "Apollo Sugar Maple", "Smooth Serviceberry", "Blue Beech",  "Eastern Redbud", "Thornless Cockspur Hawthorn", "Amur Maackia",
-      "Eastern Redcedar", "Northern Pin Oak"
-    ], "Large": [  "Sugar Maple", "White Oak", "Basswood",  "Eastern Redcedar", "Northern Pin Oak", "Ohio Buckeye", "Bur Oak"
-    ]
-  };
+const CommonAreaSpecies = {
+  "Small": [
+    "Paperbark Maple", "Apollo Sugar Maple", "Smooth Serviceberry", "Blue Beech", "Eastern Redbud","Thornless Cockspur Hawthorn", "Amur Maackia", "Whitespire Birch", "European Hornbeam", "Turkish Hazel", "Princeton Sentry Ginkgo", "Grey Birch", "Alternate-Leaf Dogwood","Common Hoptree", "Ostrya virginiana", "Trembling Aspen", "Eastern Hemlock"
+  ],
+  "Medium": ["Autumn Spire Red Maple", "Redpointe Maple", "Ruby-Red Horsechestnut", "Northern Catalpa", "Chicagoland Hackberry", "Katsura", "Yellowwood", "Scarlet Oak", "Black Maple", "Silver Queen Silver Maple", "Sugar Maple", "Autumn Blaze Freeman Maple", "Cucumber Magnolia", "White Oak", "Basswood", "Eastern Cottonwood", "Northern Pin Oak", "Silver Maple"
+  ],
+  "Large": ["Chinkapin Oak", "Shumard Oak", "Green Mountain Sugar Maple", "Tulip Tree", "Black Oak", "Sycamore", "Shagbark Hickory", "Juglans Nigra", "Large-Tooth Aspen", "White Elm"
+  ]
+};
+
+
   
    
   const HighHeatStreetView1Species = {
-    "Small": ["Hedge Maple"],
-    "Medium": ["Hedge Maple", "Zelkova"],
-    "Large": ["Hedge Maple", "Zelkova"]
+    "Small": ["Hedge Maple"],"Medium": ["Hedge Maple", "Zelkova"],"Large": ["Hedge Maple", "Zelkova"]
   };
 
-  const HighHeatCommonSpecies = {"Small": [
-        "Honey Locust",  "Eastern Redcedar", "Skyline Honey Locust",  "Espresso Kentucky Coffeetree","Street Keeper Honey Locust",
-        "Shademaster Honey Locust"
-      ],
-"Medium": [
-        "Kentucky Coffeetree",  "Princeton Elm",  "Ohio Buckeye",
-        "Northern Pin Oak",  "English Oak"
-      ],
-      "Large": [
-        "Bur Oak",                      
-        "Red Oak",                       
-        "Valley Forge Elm"
-      ]
-  
-    
+  const HighHeatCommonSpecies = {"Small": [ "Honey Locust",  "Eastern Redcedar", "Skyline Honey Locust", "Espresso Kentucky Coffeetree","Street Keeper Honey Locust",
+      "Shademaster Honey Locust"
+    ],
+    "Medium": ["Kentucky Coffeetree", "Princeton Elm", "Ohio Buckeye","Northern Pin Oak","English Oak"
+    ],
+    "Large": ["Bur Oak","Red Oak","Valley Forge Elm"
+    ]
   };
+  
 
   const IntersectionHeatMoistureSpecies = {
     "Large": ["River Birch", "Swamp White Oak", "Red Maple", "Tamarack", "Moraine Sweetgum", "Sycamore"]
@@ -182,6 +179,8 @@ require([
     }
     }
   });
+
+  
 
   const highMoistureStreetsLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/High__Moisture_Streets_view1/FeatureServer",
@@ -352,12 +351,12 @@ symbol: {
   // Ownership defining https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html
   window.OWfiltr = function (type) {
     let expr = "1=1";
-    if (type === "Public Owned") expr = "Ownership LIKE '%Public%'";
+    if (type === "Public Owned") expr = "Ownership LIKE '%Public%'"; 
     else if (type === "Private Owned") expr = "Ownership LIKE '%Private%'"; 
     [
-      NatStreetLayer, highMoistureLayer, highMoistureStreetsLayer,// checks if the ownership is private or public
+      NatStreetLayer, highMoistureLayer, highMoistureStreetsLayer,
       naturalCommonLayer, highHeatStreetView1Layer, highHeatCommonLayer, intersectionLayer
-    ].forEach(layer => layer.definitionExpression = expr);
+    ].forEach(layer => layer.definitionExpression = expr); // checks if the ownership is private or public
   };
 
 
