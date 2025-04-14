@@ -175,10 +175,9 @@ require([
       title: "Ownership: {Ownership}",
       content: function (feature) {
         const a = feature.graphic.attributes;
-        const list = a.Common_Name
-          ? a.Common_Name.split(',').map(x => `<li>${x.trim()}</li>`).join("")
-          : "<i>No species listed</i>";
+        const list = (highMoisturespecies[a.Area_Category] || []).map(x => `<li>${x}</li>`).join("");
         return `<b>Area Category:</b> ${a.Area_Category}<br><b>Suggested Trees:</b><ul>${list}</ul>`;
+        
       
     }
     }
